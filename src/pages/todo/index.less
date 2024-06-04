@@ -1,0 +1,80 @@
+.todo {
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    margin-left: -25%;
+    width: 50%;
+
+    .title {
+        margin-bottom: 16px;
+        font-size: 32px;
+    }
+    .icon {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+        display: inline-block;
+        margin-right: 8px;
+    }
+    .listWrap {
+        width: 100%;
+        background-color: #fff;
+        margin-top: 20px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+    }
+    .content {
+        li {
+            padding-left: 16px;
+            padding-right: 40px;
+            height: 45px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            &:hover {
+                .clear {
+                    opacity: 1;
+                }
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+            .clear {
+                position: absolute;
+                right: 16px;
+                opacity: 0;
+            }
+            .text {
+                flex: 1;
+                margin-left: 8px;
+                font-size: 14px;
+            }
+            .finished {
+                color: #ddd;
+                text-decoration:line-through;
+            }
+        }
+
+    }
+    .listBottom {
+        height: 45px;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 16px;
+        padding-right: 16px;
+        align-items: center;
+        font-size: 14px;
+        color: #333;
+        border-top: 1px solid #ddd;
+        :global {
+            .ant-btn {
+                color: #333;
+            }
+        }
+    }
+    
+}
